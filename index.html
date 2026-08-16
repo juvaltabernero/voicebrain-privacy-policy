@@ -87,7 +87,15 @@
     0%,100%{ transform:translateY(0) scale(1); }
     50%{ transform:translateY(22px) scale(1.04); }
   }
-  .cover-inner{ position:relative; z-index:1; max-width:34rem; }
+  .cover-inner{
+    position:relative;
+    z-index:1;
+    max-width:34rem;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+  }
   .cover-logo-wrap{ position:relative; display:inline-block; margin-bottom:1.75rem; }
   .cover-logo-wrap::after{
     content:"";
@@ -602,7 +610,7 @@
     <dl class="meta">
       <div><dt>Effective date</dt><dd>August 16, 2026</dd></div>
       <div><dt>App version</dt><dd>1.0</dd></div>
-      <div><dt>Developer</dt><dd>Louis Juval Ergina Tabernero</dd></div>
+      <div><dt>Developer</dt><dd>Louis Juval Tabernero</dd></div>
     </dl>
 
     <nav class="toc" aria-label="Table of contents">
