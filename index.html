@@ -25,8 +25,9 @@
     --radius:14px;
     --font-body:'Atkinson Hyperlegible', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --measure:40rem;
-    --accent-purple:#8a2be2;
-    --accent-cyan:#00d2ff;
+    --accent-purple:#8B3FF0;
+    --accent-blue-mid:#4A7BF7;
+    --accent-cyan:#22D3F0;
   }
 
   @media (prefers-color-scheme: dark){
@@ -64,7 +65,7 @@
     justify-content:center;
     position:relative;
     overflow:hidden;
-    background:#0B0C10;
+    background:#0A0A10;
     color:#fff;
     text-align:center;
     padding:2rem;
@@ -87,46 +88,90 @@
     50%{ transform:translateY(22px) scale(1.04); }
   }
   .cover-inner{ position:relative; z-index:1; max-width:34rem; }
+  .cover-logo-wrap{ position:relative; display:inline-block; margin-bottom:1.75rem; }
+  .cover-logo-wrap::after{
+    content:"";
+    position:absolute;
+    left:50%;
+    bottom:-16px;
+    transform:translateX(-50%);
+    width:65%;
+    height:20px;
+    background:radial-gradient(ellipse at center, rgba(139,63,240,0.5), transparent 72%);
+    filter:blur(7px);
+    z-index:-1;
+  }
   .cover-logo{
-    width:96px;
-    height:96px;
-    border-radius:22px;
+    display:block;
+    width:104px;
+    height:104px;
+    border-radius:24px;
     object-fit:cover;
-    box-shadow:0 0 26px rgba(0,210,255,0.35), 0 0 42px rgba(138,43,226,0.35);
+    box-shadow:0 0 30px rgba(34,211,240,0.32), 0 0 48px rgba(139,63,240,0.32);
     border:1px solid rgba(255,255,255,0.15);
-    margin-bottom:1.5rem;
   }
   .cover-eyebrow{
-    font-size:0.85rem;
+    font-size:0.8rem;
     font-weight:700;
-    letter-spacing:0.16em;
+    letter-spacing:0.2em;
     text-transform:uppercase;
     color:var(--accent-cyan);
-    margin:0 0 0.75rem;
+    margin:0 0 0.85rem;
   }
   .cover-title{
-    font-size:clamp(2.4rem,7vw,3.75rem);
-    margin:0 0 1rem;
+    font-size:clamp(2.1rem,5.5vw,3.1rem);
+    margin:0 0 2rem;
     font-weight:700;
-    line-height:1.05;
+    line-height:1.15;
     color:#fff;
+    letter-spacing:-0.01em;
   }
   .cover-title span{
-    background:linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+    background:linear-gradient(135deg, var(--accent-purple), var(--accent-blue-mid) 55%, var(--accent-cyan));
     -webkit-background-clip:text;
     -webkit-text-fill-color:transparent;
     background-clip:text;
   }
-  .cover-sub{
-    font-size:1.15rem;
-    color:rgba(240,239,236,0.78);
-    margin:0 0 2.5rem;
+  .cover-wave{
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    gap:7px;
+    height:30px;
+    margin:0 0 2.25rem;
+  }
+  .cover-wave span{
+    width:5px;
+    border-radius:3px;
+    background:linear-gradient(180deg, var(--accent-purple), var(--accent-cyan));
+    height:10px;
+  }
+  .cover-wave span:nth-child(1){ height:14px; }
+  .cover-wave span:nth-child(2){ height:26px; }
+  .cover-wave span:nth-child(3){ height:10px; }
+  .cover-wave span:nth-child(4){ height:30px; }
+  .cover-wave span:nth-child(5){ height:16px; }
+  .cover-wave span:nth-child(6){ height:22px; }
+  .cover-wave span:nth-child(7){ height:12px; }
+  @media (prefers-reduced-motion: no-preference){
+    .cover-wave span{ animation:cover-wave-pulse 1.4s ease-in-out infinite; }
+    .cover-wave span:nth-child(1){ animation-delay:-1.2s; }
+    .cover-wave span:nth-child(2){ animation-delay:-0.9s; }
+    .cover-wave span:nth-child(3){ animation-delay:-1.35s; }
+    .cover-wave span:nth-child(4){ animation-delay:-0.5s; }
+    .cover-wave span:nth-child(5){ animation-delay:-1.05s; }
+    .cover-wave span:nth-child(6){ animation-delay:-0.7s; }
+    .cover-wave span:nth-child(7){ animation-delay:-1.5s; }
+  }
+  @keyframes cover-wave-pulse{
+    0%,100%{ transform:scaleY(0.55); opacity:0.75; }
+    50%{ transform:scaleY(1); opacity:1; }
   }
   .cover-cta{
     display:inline-flex;
     align-items:center;
     gap:0.6rem;
-    background:linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+    background:linear-gradient(135deg, var(--accent-purple), var(--accent-blue-mid) 55%, var(--accent-cyan));
     color:#fff;
     font-weight:700;
     font-size:1.05rem;
@@ -134,16 +179,33 @@
     border-radius:999px;
     text-decoration:none;
     text-shadow:0 1px 3px rgba(0,0,0,0.35);
-    box-shadow:0 10px 26px rgba(0,210,255,0.22), 0 6px 18px rgba(138,43,226,0.22);
+    box-shadow:0 10px 26px rgba(34,211,240,0.22), 0 6px 18px rgba(139,63,240,0.22);
   }
   .cover-cta svg{ width:18px; height:18px; flex-shrink:0; }
   .cover-cta:hover{
     transform:translateY(-3px);
-    box-shadow:0 14px 34px rgba(0,210,255,0.38), 0 8px 24px rgba(138,43,226,0.38);
+    box-shadow:0 14px 34px rgba(34,211,240,0.38), 0 8px 24px rgba(139,63,240,0.38);
   }
   .cover-cta:focus-visible{ outline-color:#fff; }
   @media (prefers-reduced-motion: no-preference){
     .cover-cta{ transition:transform 200ms ease, box-shadow 200ms ease; }
+  }
+
+  .cover-scroll-cue{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:0.4rem;
+    margin-top:2.5rem;
+    color:rgba(255,255,255,0.4);
+  }
+  .cover-scroll-cue svg{ width:18px; height:18px; }
+  @media (prefers-reduced-motion: no-preference){
+    .cover-scroll-cue svg{ animation:cue-bounce 1.8s ease-in-out infinite; }
+  }
+  @keyframes cue-bounce{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(6px); }
   }
 
   body{
@@ -478,14 +540,21 @@
   <div class="cover-orb cover-orb--1" aria-hidden="true"></div>
   <div class="cover-orb cover-orb--2" aria-hidden="true"></div>
   <div class="cover-inner">
-    <img src="latest.png" alt="VoiceBrain app logo" class="cover-logo">
-    <span class="cover-eyebrow">Accessibility, built in</span>
-    <h1 class="cover-title">Voice<span>Brain</span></h1>
-    <p class="cover-sub">Privacy Policy — plain language, on-device by default.</p>
+    <div class="cover-logo-wrap">
+      <img src="latest.png" alt="VoiceBrain app logo" class="cover-logo">
+    </div>
+    <span class="cover-eyebrow">VoiceBrain</span>
+    <h1 class="cover-title">Privacy, <span>on your terms.</span></h1>
+    <div class="cover-wave" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
     <a href="#content" class="cover-cta">
       Read the policy
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
     </a>
+    <div class="cover-scroll-cue" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+    </div>
   </div>
 </section>
 
@@ -533,7 +602,7 @@
     <dl class="meta">
       <div><dt>Effective date</dt><dd>August 16, 2026</dd></div>
       <div><dt>App version</dt><dd>1.0</dd></div>
-      <div><dt>Developer</dt><dd>Louis Juval Tabernero</dd></div>
+      <div><dt>Developer</dt><dd>Louis Juval Ergina Tabernero</dd></div>
     </dl>
 
     <nav class="toc" aria-label="Table of contents">
