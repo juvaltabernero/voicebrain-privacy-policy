@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Voicebrain</title>
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --card-bg: #12141d;
+            --accent-purple: #8a2be2;
+            --accent-cyan: #00d2ff;
+            --text-main: #e0e6ed;
+            --text-muted: #94a3b8;
+            --border-color: #1f2430;
+        }
+
+        body {
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 24px;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .app-logo {
+            width: 72px;
+            height: 72px;
+            border-radius: 16px;
+            object-fit: cover;
+            box-shadow: 0 0 15px rgba(0, 210, 255, 0.3), 0 0 25px rgba(138, 43, 226, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin: 0;
+            background: linear-gradient(135deg, var(--accent-purple), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        h2 {
+            color: var(--accent-cyan);
+            margin-top: 32px;
+            font-size: 1.3rem;
+            border-left: 3px solid var(--accent-purple);
+            padding-left: 10px;
+        }
+
+        .meta-info {
+            background: var(--card-bg);
+            padding: 16px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            border: 1px solid var(--border-color);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        .meta-info p {
+            margin: 4px 0;
+            color: var(--text-muted);
+        }
+
+        .meta-info strong {
+            color: var(--text-main);
+        }
+
+        .toc {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            padding: 18px 24px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+        }
+
+        .toc strong {
+            color: var(--accent-cyan);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .toc ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .toc li {
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            color: #ffffff;
+        }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #9b51e0, #30b0fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-container">
+        <!-- Logo Image File -->
+        <img src="latest.png" alt="VoiceBrain Logo" class="app-logo">
+        <h1>Privacy Policy for VoiceBrain</h1>
+    </div>
+    
+    <div class="meta-info">
+        <p><strong>Effective Date:</strong> August 16, 2026</p>
+        <p><strong>App Version:</strong> 1.0</p>
+        <p><strong>Developer:</strong> Louis Juval Tabernero</p>
+    </div>
+
+    <div class="toc">
+        <strong>On this page:</strong>
+        <ul>
+            <li>1. Overview</li>
+            <li>2. Data We Use</li>
+            <li>3. What Stays On Your Phone</li>
+            <li>4. Third-Party Services</li>
+            <li>5. Who We Share Data With</li>
+            <li>6. Storage & Retention</li>
+            <li>7. Your Controls</li>
+            <li>8. Children's Privacy</li>
+            <li>9. Security</li>
+            <li>10. Changes to This Policy</li>
+            <li>11. Contact Us</li>
+        </ul>
+    </div>
+
+    <h2>1. Overview</h2>
+    <p><span class="gradient-text">VoiceBrain</span> is an accessibility app built for blind and low-vision users. It uses the camera, microphone, and location to describe surroundings, read text, identify money and colors, and reach emergency contacts by voice — most of this processing happens directly on your phone, not on a server we run.</p>
+    <p>This policy explains exactly what the app accesses, why, and — for every item — whether it ever leaves your device.</p>
+
+    <h2>2. Data We Use</h2>
+    <p>Each permission below exists for one specific feature. The app never requests a permission "just in case."</p>
+    <ul>
+        <li><strong>Camera (On-device):</strong> Powers Object Detection, Guidance, Place Detection, Text Reader, Color Identifier, and Money Detection. Every frame is analyzed by AI models running locally on your phone and is never uploaded, saved, or transmitted anywhere.</li>
+        <li><strong>Microphone (On-device, or cloud when online):</strong> Used for voice commands and Voice SMS Mode. When your phone is online, voice is transcribed by your device's built-in Android speech recognition service (typically Google's), which sends audio to Google for processing under Google's own privacy terms. When offline, or if no speech service is available, VoiceBrain switches automatically to an offline model (Whisper) that runs entirely on your device — nothing is sent anywhere.</li>
+        <li><strong>Location (Sent only to your contact):</strong> Only accessed when you say "send my location." A Google Maps link is texted to the Emergency Contact you configured in Settings. VoiceBrain does not store your location history or send it to us.</li>
+        <li><strong>SMS & Phone Calls (Sent only to your contact):</strong> Used to send Voice SMS messages, your location, and video call links, and to place calls during Emergency Mode — always to the Emergency Contact number(s) you entered yourself. VoiceBrain cannot send SMS or place calls to anyone else, and never reads your existing messages or call history.</li>
+        <li><strong>Bluetooth (On-device):</strong> Routes the microphone and audio output through a connected Bluetooth accessory (for example, smart glasses with a mic and speaker) instead of the phone's own hardware.</li>
+        <li><strong>Step / Activity Data (On-device):</strong> Powers the built-in step counter, read back to you on request. Counted locally; never logged or transmitted.</li>
+        <li><strong>List of Installed Apps (On-device):</strong> Lets you say "open Facebook" or "open YouTube" to launch another app by name. VoiceBrain only uses this list to find and start the app you asked for.</li>
+    </ul>
+
+    <h2>3. What Stays On Your Phone</h2>
+    <p>VoiceBrain has no user accounts, no sign-in, and no backend server that stores your data. There is no advertising SDK and no analytics or crash-tracking SDK collecting behavioral data. The only information stored is saved locally in your phone's app storage:</p>
+    <ul>
+        <li>Your nickname and language/voice preferences</li>
+        <li>Emergency Contact names and numbers you entered</li>
+        <li>Detection settings and thresholds</li>
+    </ul>
+    <p>None of this is synced to a cloud account or visible to us. Uninstalling the app permanently deletes all of it from your device.</p>
+
+    <h2>4. Third-Party Services</h2>
+    <p>VoiceBrain relies on a small number of services built into Android itself, rather than services we operate:</p>
+    <ul>
+        <li>Android's speech recognition service (usually Google) — receives audio only while you're online and only for the duration of a voice command, governed by that provider's own privacy policy.</li>
+        <li>Google ML Kit Text Recognition — reads text for the Text Reader feature entirely on-device; images are not uploaded to Google.</li>
+    </ul>
+    <p>We do not integrate any advertising network, analytics platform, or data broker.</p>
+
+    <h2>5. Who We Share Data With</h2>
+    <p>We do not sell, rent, or share your data with advertisers or other third parties. The only "sharing" that happens is the direct result of features you trigger yourself — for example, texting your location to the Emergency Contact you chose. That message goes from your phone to their phone; it does not pass through us.</p>
+
+    <h2>6. Storage & Retention</h2>
+    <p>All app data lives in local storage on your device for as long as the app is installed. There is no remote copy for us to retain, delete, or lose in a breach, because we never receive it in the first place. Uninstalling VoiceBrain removes it immediately.</p>
+
+    <h2>7. Your Controls</h2>
+    <ul>
+        <li><strong>Permissions:</strong> Grant or revoke any permission anytime in Android Settings → Apps → VoiceBrain → Permissions. Features tied to a revoked permission simply stop working until it's re-granted.</li>
+        <li><strong>Offline mode:</strong> Turn off mobile data and Wi-Fi to keep all voice recognition on-device.</li>
+        <li><strong>Delete everything:</strong> Uninstall the app.</li>
+    </ul>
+
+    <h2>8. Children's Privacy</h2>
+    <p>VoiceBrain is not directed at children and we do not knowingly collect personal information from children. If you believe a child has provided us information, contact us using the details below and we'll address it.</p>
+
+    <h2>9. Security</h2>
+    <p>Because sensitive data (camera frames, audio, location) is processed on-device rather than transmitted to a server, there is no central database of user data for us to protect or that could be breached. Data you send via SMS or phone call is protected by your carrier's standard network security.</p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>If this policy changes, the updated version will be published at this same address with a new effective date at the top. Continued use of the app after an update means you accept the revised policy.</p>
+
+    <h2>11. Contact Us</h2>
+    <p>Questions about this policy or how VoiceBrain handles data can be sent to:</p>
+    <p>
+        <strong>Developer:</strong> Louis Juval Tabernero<br>
+        <strong>Email:</strong> ljtabernero.dev@gmail.com<br>
+        <em>VoiceBrain — offline-first accessibility app for blind and low-vision users.</em>
+    </p>
+
+</body>
+</html>
