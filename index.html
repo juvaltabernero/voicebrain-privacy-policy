@@ -535,6 +535,31 @@
   footer strong{ color:var(--text); }
   footer .tagline{ margin-top:1rem; font-style:italic; }
 
+  .placeholder{
+    background:var(--accent-amber-bg);
+    color:var(--accent-amber);
+    font-weight:700;
+    padding:0.05rem 0.4rem;
+    border-radius:4px;
+    font-family:ui-monospace, 'SF Mono', Menlo, monospace;
+    font-size:0.9em;
+  }
+
+  .publish-note{
+    display:flex;
+    gap:0.75rem;
+    align-items:flex-start;
+    background:var(--accent-amber-bg);
+    border:1px solid var(--accent-amber);
+    border-radius:var(--radius);
+    padding:1rem 1.25rem;
+    margin-bottom:2.5rem;
+    font-size:0.95rem;
+  }
+  .publish-note svg{ width:20px; height:20px; flex-shrink:0; color:var(--accent-amber); margin-top:0.15rem; }
+  .publish-note p{ margin:0; color:var(--text); max-width:none; }
+  .publish-note strong{ color:var(--accent-amber); }
+
   @media (prefers-reduced-motion: no-preference){
     .textctl, a{ transition:background-color 150ms ease, color 150ms ease; }
   }
@@ -608,9 +633,9 @@
     </div>
 
     <dl class="meta">
-      <div><dt>Effective date</dt><dd>August 16, 2026</dd></div>
+      <div><dt>Effective date</dt><dd>August 20, 2026</dd></div>
       <div><dt>App version</dt><dd>1.0</dd></div>
-      <div><dt>Developer</dt><dd>Louis Juval Tabernero</dd></div>
+      <div><dt>Developer</dt><dd>Louis Juval Ergina Tabernero</dd></div>
     </dl>
 
     <nav class="toc" aria-label="Table of contents">
@@ -670,7 +695,7 @@
           <div class="badges">
             <span class="badge badge--contact"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M22 2 11 13M22 2 15 22l-4-9-9-4 20-7Z"/></svg>Sent only to your contact</span>
           </div>
-          <p>Only accessed when you say "send my location." A Google Maps link is texted to the Emergency Contact you configured in Settings. VoiceBrain does not store your location history or send it to us.</p>
+          <p>Accessed when you say "send my location," and optionally on a repeating schedule if you turn on Auto Send Location in Settings (every 5–60 minutes, your choice). Either way, your coordinates are texted only to the Emergency Contact you configured — never to us, and never as a link (plain coordinates avoid carrier SMS filters). Auto Send Location only runs while the app is open in the foreground; it stops the moment you close the app, and can be turned off in Settings at any time. VoiceBrain does not keep a location history — each update simply replaces the last.</p>
         </li>
         <li>
           <strong>SMS &amp; Phone Calls</strong>
@@ -726,7 +751,7 @@
 
     <section id="sharing">
       <h2><span class="num">5.</span> Who We Share Data With</h2>
-      <p>We do not sell, rent, or share your data with advertisers or other third parties. The only "sharing" that happens is the direct result of features you trigger yourself — for example, texting your location to the Emergency Contact you chose. That message goes from your phone to their phone; it does not pass through us.</p>
+      <p>We do not sell, rent, or share your data with advertisers or other third parties. The only "sharing" that happens is the direct result of features you turned on yourself — for example, texting your location to the Emergency Contact you chose, whether triggered by voice or by the Auto Send Location schedule. That message goes from your phone to their phone; it does not pass through us.</p>
     </section>
 
     <section id="retention">
@@ -738,6 +763,7 @@
       <h2><span class="num">7.</span> Your Controls</h2>
       <ul class="plain">
         <li><strong>Permissions:</strong> Grant or revoke any permission anytime in Android Settings → Apps → VoiceBrain → Permissions. Features tied to a revoked permission simply stop working until it's re-granted.</li>
+        <li><strong>Auto Send Location:</strong> Off by default; turn it on or off anytime from VoiceBrain's own Settings menu.</li>
         <li><strong>Offline mode:</strong> Turn off mobile data and Wi-Fi to keep all voice recognition on-device.</li>
         <li><strong>Delete everything:</strong> Uninstall the app.</li>
       </ul>
@@ -762,8 +788,8 @@
       <h2><span class="num">11.</span> Contact Us</h2>
       <p>Questions about this policy or how VoiceBrain handles data can be sent to:</p>
       <footer>
-        <p><strong>Developer:</strong> Louis Juval Tabernero<br>
-        <strong>Email:</strong> <a href="mailto:juvaltabernero@gmail.com">juvaltabernero@gmail.com</a></p>
+        <p><strong>Email:</strong> <a href="mailto:juvaltabernero@gmail.com">juvaltabernero@gmail.com</a><br>
+        <strong>Developer:</strong> Louis Juval Ergina Tabernero</p>
         <p class="tagline">VoiceBrain — offline-first accessibility app for blind and low-vision users.</p>
       </footer>
     </section>
